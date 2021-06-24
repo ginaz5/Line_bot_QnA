@@ -25,7 +25,7 @@ def callback(request):
         for event in events:
             if isinstance(event, MessageEvent):
                 mtext = event.message.text
-                if mtext == '@使用說明':
+                if mtext == "@使用說明_User_Guide":
                     func.sendUse(event)
 
                 else:
