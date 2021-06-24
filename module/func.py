@@ -16,8 +16,7 @@ method = "/qnamaker/knowledgebases/" + kb + "/generateAnswer"
 
 def sendUse(event):  #使用說明
     try:
-        text1 ='''這是回答關於Gina的問答機器人，請輸入您想問Gina的問題。\nThis is a line bot to answer questions about Gina, I'm ready for your questions.
-               '''
+        text1 ='''這是回答關於Gina的問答機器人，請輸入您想問Gina的問題。\n\nThis is a line bot to answer questions about Gina, I'm ready for your questions.'''
         message = TextSendMessage(
             text = text1
         )
@@ -41,7 +40,7 @@ def sendQnA(event, mtext):  #QnA
     result = json.loads(response.read())
     result1 = result['answers'][0]['answer']
     if 'No good match' in result1:
-        text1 = '''很抱歉，資料庫中無適當解答！請再輸入問題。\nSorry, the answer to this question isn't avaliable, please try another question.'''
+        text1 = '''很抱歉，資料庫中無適當解答！請再輸入問題。\n\nSorry, the answer to this question isn't avaliable, please try another question.'''
         #將沒有解答的問題寫入資料庫
         userid = event.source.user_id
         unit = users.objects.create(uid=userid, question=mtext)
