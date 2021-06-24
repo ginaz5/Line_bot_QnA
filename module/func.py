@@ -16,9 +16,7 @@ method = "/qnamaker/knowledgebases/" + kb + "/generateAnswer"
 
 def sendUse(event):  #使用說明
     try:
-        text1 ='''
-        這是回答關於Gina的問答機器人，請輸入您想問Gina的問題。
-        This is a line bot to answer questions about Gina, I'm ready for your questions.
+        text1 ='''這是回答關於Gina的問答機器人，請輸入您想問Gina的問題。\nThis is a line bot to answer questions about Gina, I'm ready for your questions.
                '''
         message = TextSendMessage(
             text = text1
