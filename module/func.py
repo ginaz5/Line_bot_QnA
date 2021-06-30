@@ -9,9 +9,9 @@ from qnaapi.models import users
 line_bot_api = LineBotApi(settings.LINE_CHANNEL_ACCESS_TOKEN)
 
 
-host = 'ehappyqna-0528.azurewebsites.net'  #主機
-endpoint_key = "ffcc8ec4-929b-4526-b850-aeed48b53eb1"  #授權碼
-kb = "da993f3a-f08f-46ab-b5c8-11d6ba7a0d36"  #GUID碼
+host = 'linebotqna.azurewebsites.net'  #主機
+endpoint_key = "1c5ec3af-e58b-41fa-b131-0603e9ea6d78"  #授權碼
+kb = "1ffe8713-2bba-46f6-9dbd-625eb9b6b071"  #GUID碼
 method = "/qnamaker/knowledgebases/" + kb + "/generateAnswer"
 
 def sendUse(event):  #使用說明
